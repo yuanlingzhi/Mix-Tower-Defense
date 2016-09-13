@@ -13,6 +13,7 @@
 #import "HelloWorldScene.h"
 #import "SettingScene.h"
 #import "OALSimpleAudio.h"
+#import "LevelPickScene.h"
 // -----------------------------------------------------------------------
 
 @implementation HelloWorldScene
@@ -39,6 +40,7 @@
     CCButton *startButton = [CCButton buttonWithTitle:@"Start Game" fontName:@"ArialMT" fontSize:30];
     startButton.positionType = CCPositionTypeNormalized;
     startButton.position = (CGPoint){0.5, 0.5};
+    [startButton setTarget:self selector:@selector(forwardToLevelPicking)];
     [self addChild:startButton];
     
     CCButton *settingButton = [CCButton buttonWithTitle:@"Setting" fontName:@"ArialMT" fontSize:16];
@@ -55,6 +57,12 @@
 
 -(void) forwardToSetting{
     [[CCDirector sharedDirector] pushScene: [SettingScene new]];
+}
+
+-(void) forwardToLevelPicking
+{
+    LevelPickScene* levelPickScene = [[LevelPickScene alloc] initWithNumber:6 totalLevels:6];
+    [[CCDirector sharedDirector] pushScene: levelPickScene];
 }
 
 // -----------------------------------------------------------------------

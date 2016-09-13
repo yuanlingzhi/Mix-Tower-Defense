@@ -45,7 +45,7 @@
     _musicCheckbox.positionType = CCPositionTypeNormalized;
     [_musicCheckbox setPosition:(CGPoint){0.5, 0.6}];
     [_musicCheckbox setTarget:self sel:@selector(clickMusic:)];
-    _musicCheckbox.selected = YES;
+    _musicCheckbox.selected = ![[OALSimpleAudio sharedInstance] paused];
     [self addChild:_musicCheckbox];
     
     _soundCheckbox = [[MyCheckbox alloc] initWithImageAndTest:@"sound" fontName:fontName fontSize:fontSize highlightedSpriteFrameSourceFile:highlightedSpriteFrameSourceFile spriteFrame:spriteFrameSourceFile];

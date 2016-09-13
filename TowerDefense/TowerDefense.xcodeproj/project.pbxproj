@@ -210,6 +210,8 @@
 		3BC909E41D7E7FBC00EFF1AB /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BC909E21D7E7FBC00EFF1AB /* unchecked.png */; };
 		3BC909E51D7E7FBC00EFF1AB /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BC909E31D7E7FBC00EFF1AB /* checked.png */; };
 		3BC909E71D7E8B5100EFF1AB /* Track02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3BC909E61D7E8B5100EFF1AB /* Track02.mp3 */; };
+		3BF41FF41D87C8CF0063522B /* LevelPickScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF41FF31D87C8CF0063522B /* LevelPickScene.m */; };
+		3BF41FF71D87C95E0063522B /* LevelOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF41FF61D87C95E0063522B /* LevelOption.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -676,6 +678,10 @@
 		3BC909E21D7E7FBC00EFF1AB /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
 		3BC909E31D7E7FBC00EFF1AB /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
 		3BC909E61D7E8B5100EFF1AB /* Track02.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Track02.mp3; sourceTree = "<group>"; };
+		3BF41FF21D87C8CF0063522B /* LevelPickScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelPickScene.h; path = Classes/LevelPickScene.h; sourceTree = "<group>"; };
+		3BF41FF31D87C8CF0063522B /* LevelPickScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LevelPickScene.m; path = Classes/LevelPickScene.m; sourceTree = "<group>"; };
+		3BF41FF51D87C95E0063522B /* LevelOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelOption.h; path = Classes/LevelOption.h; sourceTree = "<group>"; };
+		3BF41FF61D87C95E0063522B /* LevelOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LevelOption.m; path = Classes/LevelOption.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1556,6 +1562,8 @@
 			isa = PBXGroup;
 			children = (
 				3BC909DE1D7E76ED00EFF1AB /* Utils */,
+				3BF41FF21D87C8CF0063522B /* LevelPickScene.h */,
+				3BF41FF31D87C8CF0063522B /* LevelPickScene.m */,
 				273BAF9A1D7E71050099B0A2 /* AppDelegate.h */,
 				273BAF9B1D7E71050099B0A2 /* AppDelegate.m */,
 				273BAF9D1D7E71050099B0A2 /* HelloWorldScene.h */,
@@ -1571,6 +1579,8 @@
 			children = (
 				3BC909DF1D7E771400EFF1AB /* MyCheckbox.h */,
 				3BC909E01D7E771400EFF1AB /* MyCheckbox.m */,
+				3BF41FF51D87C95E0063522B /* LevelOption.h */,
+				3BF41FF61D87C95E0063522B /* LevelOption.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -1740,6 +1750,7 @@
 				273BAD961D7E71020099B0A2 /* CCParticleSystem.m in Sources */,
 				273BAD3C1D7E71010099B0A2 /* CCActionCatmullRom.m in Sources */,
 				273BAD531D7E71020099B0A2 /* CCAnimation.m in Sources */,
+				3BF41FF41D87C8CF0063522B /* LevelPickScene.m in Sources */,
 				273BAEB91D7E71040099B0A2 /* CCBKeyframe.m in Sources */,
 				273BAE421D7E71030099B0A2 /* CCButton.m in Sources */,
 				273BAF141D7E71040099B0A2 /* IOSVersion.m in Sources */,
@@ -1807,6 +1818,7 @@
 				273BAF9C1D7E71050099B0A2 /* AppDelegate.m in Sources */,
 				273BAF1D1D7E71040099B0A2 /* NSMutableDictionary+WeakReferences.m in Sources */,
 				273BAE2A1D7E71030099B0A2 /* CCEffectContrast.m in Sources */,
+				3BF41FF71D87C95E0063522B /* LevelOption.m in Sources */,
 				273BAE941D7E71030099B0A2 /* CCProfiling.m in Sources */,
 				273BAEF71D7E71040099B0A2 /* ALDevice.m in Sources */,
 				273BAEE21D7E71040099B0A2 /* OALAudioTracks.m in Sources */,
