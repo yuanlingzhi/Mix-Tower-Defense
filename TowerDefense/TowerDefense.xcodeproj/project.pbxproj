@@ -205,6 +205,8 @@
 		273BAF9C1D7E71050099B0A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 273BAF9B1D7E71050099B0A2 /* AppDelegate.m */; };
 		273BAF9F1D7E71050099B0A2 /* HelloWorldScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 273BAF9E1D7E71050099B0A2 /* HelloWorldScene.m */; };
 		273BAFA11D7E71050099B0A2 /* white_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 273BAFA01D7E71050099B0A2 /* white_square.png */; };
+		3BB32DCF1D8BB15800DF7DF7 /* leftArrowButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BB32DCD1D8BB15800DF7DF7 /* leftArrowButton.png */; };
+		3BB32DD01D8BB15800DF7DF7 /* rightArrowButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BB32DCE1D8BB15800DF7DF7 /* rightArrowButton.png */; };
 		3BC909DD1D7E757200EFF1AB /* SettingScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC909DC1D7E757200EFF1AB /* SettingScene.m */; };
 		3BC909E11D7E771400EFF1AB /* MyCheckbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC909E01D7E771400EFF1AB /* MyCheckbox.m */; };
 		3BC909E41D7E7FBC00EFF1AB /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BC909E21D7E7FBC00EFF1AB /* unchecked.png */; };
@@ -671,6 +673,8 @@
 		273BAF9D1D7E71050099B0A2 /* HelloWorldScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelloWorldScene.h; path = Classes/HelloWorldScene.h; sourceTree = "<group>"; };
 		273BAF9E1D7E71050099B0A2 /* HelloWorldScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HelloWorldScene.m; path = Classes/HelloWorldScene.m; sourceTree = "<group>"; };
 		273BAFA01D7E71050099B0A2 /* white_square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = white_square.png; path = Resources/white_square.png; sourceTree = "<group>"; };
+		3BB32DCD1D8BB15800DF7DF7 /* leftArrowButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftArrowButton.png; sourceTree = "<group>"; };
+		3BB32DCE1D8BB15800DF7DF7 /* rightArrowButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightArrowButton.png; sourceTree = "<group>"; };
 		3BC909DB1D7E757200EFF1AB /* SettingScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingScene.h; path = Classes/SettingScene.h; sourceTree = "<group>"; };
 		3BC909DC1D7E757200EFF1AB /* SettingScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingScene.m; path = Classes/SettingScene.m; sourceTree = "<group>"; };
 		3BC909DF1D7E771400EFF1AB /* MyCheckbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCheckbox.h; path = Classes/MyCheckbox.h; sourceTree = "<group>"; };
@@ -728,6 +732,8 @@
 		273BACE51D7E71010099B0A2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3BB32DCD1D8BB15800DF7DF7 /* leftArrowButton.png */,
+				3BB32DCE1D8BB15800DF7DF7 /* rightArrowButton.png */,
 				3BC909E61D7E8B5100EFF1AB /* Track02.mp3 */,
 				3BC909E21D7E7FBC00EFF1AB /* unchecked.png */,
 				3BC909E31D7E7FBC00EFF1AB /* checked.png */,
@@ -1673,6 +1679,7 @@
 				273BACED1D7E71010099B0A2 /* Default-Landscape~ipad.png in Resources */,
 				3BC909E71D7E8B5100EFF1AB /* Track02.mp3 in Resources */,
 				273BAD021D7E71010099B0A2 /* Icon-Small.png in Resources */,
+				3BB32DD01D8BB15800DF7DF7 /* rightArrowButton.png in Resources */,
 				273BAD001D7E71010099B0A2 /* Icon-Small-50.png in Resources */,
 				273BAFA11D7E71050099B0A2 /* white_square.png in Resources */,
 				273BACF41D7E71010099B0A2 /* Icon-72.png in Resources */,
@@ -1680,6 +1687,7 @@
 				273BADEF1D7E71030099B0A2 /* LICENSE_cocos2d.txt in Resources */,
 				273BADF21D7E71030099B0A2 /* CCEffectRenderer.h in Resources */,
 				273BACEB1D7E71010099B0A2 /* Default-568h@2x.png in Resources */,
+				3BB32DCF1D8BB15800DF7DF7 /* leftArrowButton.png in Resources */,
 				273BAD0B1D7E71010099B0A2 /* iTunesArtwork in Resources */,
 				273BAEC91D7E71040099B0A2 /* LICENSE_CCBReader.txt in Resources */,
 				273BAD061D7E71010099B0A2 /* Icon-Spotlight-iOS7.png in Resources */,

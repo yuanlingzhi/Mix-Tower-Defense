@@ -8,6 +8,7 @@
 
 #import "CCScene.h"
 #import "LevelOption.h"
+#import "SettingScene.h"
 
 @interface LevelPickScene : CCScene
 

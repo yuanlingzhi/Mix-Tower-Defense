@@ -23,6 +23,7 @@
     node.anchorPoint = CGPointMake(0.5, 0.5);
     [self addChild:node];
     self.positionType = CCPositionTypeNormalized;
+    self.anchorPoint = CGPointMake(0.5, 0.5);
     self.position = position;
     [self addChild:_label];
     return self;

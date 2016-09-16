@@ -61,7 +61,7 @@
 
 -(void) forwardToLevelPicking
 {
-    LevelPickScene* levelPickScene = [[LevelPickScene alloc] initWithNumber:6 totalLevels:6];
+    LevelPickScene* levelPickScene = [[LevelPickScene alloc] initWithNumber:8 totalLevels:6];
     [[CCDirector sharedDirector] pushScene: levelPickScene];
 }
 
