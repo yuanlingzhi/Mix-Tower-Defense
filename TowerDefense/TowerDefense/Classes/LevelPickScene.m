@@ -15,9 +15,12 @@
     CCButton* _returnButton;
     CCButton* _leftArrow;
     CCButton* _rightArrow;
+    CGPoint _previousPosition;
+    int _direction;
 }
 - (id)initWithNumber:(int)onepageNumber totalLevels:(int)totalLevels{
     self = [super init];
+    _direction = 0; //1 is left, -1 is right
     float leftMargin = 0.05;
     float rightMargin = 0.05;
     float topMargin = 0.1;
@@ -25,21 +28,37 @@
     float increment = (1-leftMargin-rightMargin)/(  (onepageNumber/2) > 0 ? (onepageNumber/2) : 3  );
     float firstRow = 0.7;
     float secondRow = 0.4;
-    float tempLeftMargin = leftMargin;
-    for(int i=0;i<onepageNumber/2 && i<totalLevels ;i++){
-        CGPoint tempPoint = (CGPoint){(increment)/2+tempLeftMargin, firstRow};
-        tempLeftMargin += increment;
-        LevelOption* levelOption = [[LevelOption alloc] initWithNamePosition:[@(i+1) stringValue] Position:tempPoint];
-        [self addChild:levelOption];
-        [_levels addObject:levelOption];
+    float firstRowLeftMargin = 0;
+    float secondRowLeftMargin = 0;
+    _levels = [NSMutableArray new];
+    int remainLevels = totalLevels;
+    int i = 0;
+    while(remainLevels != 0){
+        firstRowLeftMargin += leftMargin;
+        for(int j = 0 ;j<onepageNumber/2 && remainLevels != 0 ;i++,j++){
+            CGPoint tempPoint = (CGPoint){(increment)/2+firstRowLeftMargin, firstRow};
+            firstRowLeftMargin += increment;
+            LevelOption* levelOption = [[LevelOption alloc] initWithNamePosition:[@(i+1) stringValue] Position:tempPoint];
+            [self addChild:levelOption];
+            [_levels addObject:levelOption];
+            remainLevels--;
+        }
+        firstRowLeftMargin += rightMargin;
+        
+        
+        secondRowLeftMargin += leftMargin;
+        for(int j = 0 ;j<onepageNumber/2 && remainLevels != 0 ;i++, j++){
+            CGPoint tempPoint = (CGPoint){(increment)/2+secondRowLeftMargin, secondRow};
+            secondRowLeftMargin += increment;
+            LevelOption* levelOption = [[LevelOption alloc] initWithNamePosition:[@(i+1) stringValue] Position:tempPoint];
+            [self addChild:levelOption];
+            [_levels addObject:levelOption];
+            remainLevels--;
+        }
+        secondRowLeftMargin += rightMargin;
     }
-    tempLeftMargin = leftMargin;
-    for(int i=0;i<onepageNumber/2 && i<totalLevels-onepageNumber/2 ;i++){
-        CGPoint tempPoint = (CGPoint){(increment)/2+tempLeftMargin, secondRow};
-        tempLeftMargin += increment;
-        LevelOption* levelOption = [[LevelOption alloc] initWithNamePosition:[@(i+1+onepageNumber/2) stringValue] Position:tempPoint];
-        [self addChild:levelOption];
-        [_levels addObject:levelOption];
+    if(_levels.count != 0){
+        _previousPosition = ((LevelOption*)(_levels[0])).position;
     }
     
     CCButton *settingButton = [CCButton buttonWithTitle:@"Setting" fontName:@"ArialMT" fontSize:16];
@@ -74,12 +93,41 @@
     return self;
 }
 
--(void) leftArrowClicked{
+-(void)update:(CCTime)delta{
+    if(_direction == 0){
+        return;
+    }
+    if( fabs(_previousPosition.x - ((LevelOption*)_levels[0]).position.x) >=1 ){
+        _previousPosition = ((LevelOption*)(_levels[0])).position;
+        _direction = 0;
+        return;
+    }
     
+    for(int i = 0; i < _levels.count; i++){
+        LevelOption* temp = _levels[i];
+        if(_direction == 1){
+            temp.position = CGPointMake(temp.position.x-0.01, temp.position.y);
+        }
+        else{
+            temp.position = CGPointMake(temp.position.x+0.01, temp.position.y);
+        }
+    }
+}
+
+-(void) leftArrowClicked{
+    float firstOptionXPosition = ((LevelOption*)_levels[0]).position.x;
+    if(firstOptionXPosition > 0 && firstOptionXPosition < 1){
+        return;
+    }
+    _direction = -1;
 }
 
 -(void) rightArrowClicked{
-    
+    float lastOptionXPosition = ((LevelOption*)_levels[_levels.count-1]).position.x;
+    if(lastOptionXPosition > 0 && lastOptionXPosition < 1){
+        return;
+    }
+    _direction = 1;
 }
 
 -(void)forwardToSetting{
