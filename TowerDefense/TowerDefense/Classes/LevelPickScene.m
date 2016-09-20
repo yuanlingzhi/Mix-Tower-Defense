@@ -7,8 +7,8 @@
 //
 
 #import "LevelPickScene.h"
-
-
+#import "FileParser.h"
+#import "AppConfig.h"
 @implementation LevelPickScene
 {
     NSMutableArray* _levels;
@@ -17,9 +17,14 @@
     CCButton* _rightArrow;
     CGPoint _previousPosition;
     int _direction;
+    FileParser* _fileParserHandler;
 }
-- (id)initWithNumber:(int)onepageNumber totalLevels:(int)totalLevels{
+- (id)initWithConfig{
     self = [super init];
+    _fileParserHandler = [[FileParser alloc] initWithFileName: [AppConfig sharedAppConfig].appConfigMap[@"mapsConfig"]];
+    NSArray* levelNames = [_fileParserHandler getColumnFromNumber:1];
+    int totalLevels = (int)levelNames.count;
+    int onepageNumber = 6;
     _direction = 0; //1 is left, -1 is right
     float leftMargin = 0.05;
     float rightMargin = 0.05;
@@ -38,7 +43,7 @@
         for(int j = 0 ;j<onepageNumber/2 && remainLevels != 0 ;i++,j++){
             CGPoint tempPoint = (CGPoint){(increment)/2+firstRowLeftMargin, firstRow};
             firstRowLeftMargin += increment;
-            LevelOption* levelOption = [[LevelOption alloc] initWithNamePosition:[@(i+1) stringValue] Position:tempPoint];
+            LevelOption* levelOption = [[LevelOption alloc] initWithNamePosition:levelNames[i] Position:tempPoint];
             [self addChild:levelOption];
             [_levels addObject:levelOption];
             remainLevels--;
@@ -50,7 +55,7 @@
         for(int j = 0 ;j<onepageNumber/2 && remainLevels != 0 ;i++, j++){
             CGPoint tempPoint = (CGPoint){(increment)/2+secondRowLeftMargin, secondRow};
             secondRowLeftMargin += increment;
-            LevelOption* levelOption = [[LevelOption alloc] initWithNamePosition:[@(i+1) stringValue] Position:tempPoint];
+            LevelOption* levelOption = [[LevelOption alloc] initWithNamePosition:levelNames[i] Position:tempPoint];
             [self addChild:levelOption];
             [_levels addObject:levelOption];
             remainLevels--;

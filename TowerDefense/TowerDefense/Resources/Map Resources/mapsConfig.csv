@@ -1,0 +1,4 @@
+level_id,map_name,map_data_csv,map_background_pic,width,height
+1,OMG,level1_data.csv,level1.jpg,12,8
+2,Hello World,level2_data.csv,level2.jpg,12,8
+3,WTF,level3_data.csv,level3.jpg,12,8

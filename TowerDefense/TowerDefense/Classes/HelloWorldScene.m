@@ -20,6 +20,11 @@
 
 // -----------------------------------------------------------------------
 
+{
+    NSMutableDictionary* _config;
+}
+
+
 - (id)init
 {
     // Apple recommend assigning self with supers return value
@@ -61,7 +66,7 @@
 
 -(void) forwardToLevelPicking
 {
-    LevelPickScene* levelPickScene = [[LevelPickScene alloc] initWithNumber:6 totalLevels:27];
+    LevelPickScene* levelPickScene = [[LevelPickScene alloc] initWithConfig];
     [[CCDirector sharedDirector] pushScene: levelPickScene];
 }
 

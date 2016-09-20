@@ -12,6 +12,6 @@
 
 @interface LevelPickScene : CCScene
 
-- (id)initWithNumber:(int)onepageNumber totalLevels:(int)totalLevels;
+- (id)initWithConfig;
 
 @end
