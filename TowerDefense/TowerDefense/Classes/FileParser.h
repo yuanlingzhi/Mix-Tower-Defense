@@ -14,4 +14,5 @@
 -(NSArray*)getLineFromNumber:(int) num;
 -(NSArray*)getFileHeader;
 -(NSArray*)getColumnFromNumber:(int) num;
+-(int) getRowNumberWithoutHeader;
 @end

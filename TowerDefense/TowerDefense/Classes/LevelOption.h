@@ -9,9 +9,9 @@
 #import "CCSprite.h"
 #import "cocos2d.h"
 #import "cocos2d-ui.h"
-
+#import "FileParser.h"
 @interface LevelOption : CCSprite
 
-- (id)initWithNamePosition:(NSString*)level Position:(CGPoint)position;
+- (id)initWithNamePosition:(NSString*)level Position:(CGPoint)position FileParserHandler:(FileParser*)FileParserHandler LineNumber:(int) LineNumber;
 
 @end

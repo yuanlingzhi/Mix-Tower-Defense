@@ -203,6 +203,7 @@
 		273BAF941D7E71050099B0A2 /* LICENSE_Chipmunk.txt in Resources */ = {isa = PBXBuildFile; fileRef = 273BAF931D7E71050099B0A2 /* LICENSE_Chipmunk.txt */; };
 		273BAF981D7E71050099B0A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 273BAF971D7E71050099B0A2 /* main.m */; };
 		273BAFA11D7E71050099B0A2 /* white_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 273BAFA01D7E71050099B0A2 /* white_square.png */; };
+		3B847CF01D939544008A3CD2 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B847CEF1D939544008A3CD2 /* Level.m */; };
 		3BB32DCF1D8BB15800DF7DF7 /* leftArrowButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BB32DCD1D8BB15800DF7DF7 /* leftArrowButton.png */; };
 		3BB32DD01D8BB15800DF7DF7 /* rightArrowButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BB32DCE1D8BB15800DF7DF7 /* rightArrowButton.png */; };
 		3BC909E41D7E7FBC00EFF1AB /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BC909E21D7E7FBC00EFF1AB /* unchecked.png */; };
@@ -677,6 +678,8 @@
 		273BAF961D7E71050099B0A2 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = "Supporting Files/Prefix.pch"; sourceTree = "<group>"; };
 		273BAF971D7E71050099B0A2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = "<group>"; };
 		273BAFA01D7E71050099B0A2 /* white_square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = white_square.png; path = Resources/white_square.png; sourceTree = "<group>"; };
+		3B847CEE1D939544008A3CD2 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
+		3B847CEF1D939544008A3CD2 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
 		3BB32DCD1D8BB15800DF7DF7 /* leftArrowButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftArrowButton.png; sourceTree = "<group>"; };
 		3BB32DCE1D8BB15800DF7DF7 /* rightArrowButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightArrowButton.png; sourceTree = "<group>"; };
 		3BC909E21D7E7FBC00EFF1AB /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
@@ -1642,6 +1645,8 @@
 				3BEF67261D91056600CA7687 /* MyCheckbox.m */,
 				3BEF67271D91056600CA7687 /* SettingScene.h */,
 				3BEF67281D91056600CA7687 /* SettingScene.m */,
+				3B847CEE1D939544008A3CD2 /* Level.h */,
+				3B847CEF1D939544008A3CD2 /* Level.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1908,6 +1913,7 @@
 				273BAE781D7E71030099B0A2 /* CCAppDelegate.m in Sources */,
 				273BAE751D7E71030099B0A2 /* UITouch+CC.m in Sources */,
 				273BADF71D7E71030099B0A2 /* CCLightCollection.m in Sources */,
+				3B847CF01D939544008A3CD2 /* Level.m in Sources */,
 				273BAD921D7E71020099B0A2 /* CCParticleExamples.m in Sources */,
 				273BAD3F1D7E71010099B0A2 /* CCActionEase.m in Sources */,
 				273BAE821D7E71030099B0A2 /* CCWindow.m in Sources */,

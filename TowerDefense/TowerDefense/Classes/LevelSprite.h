@@ -7,7 +7,10 @@
 //
 
 #import "CCSprite.h"
+#import "FileParser.h"
 
 @interface LevelSprite : CCSprite
+
+-(id) initWithMapConfig:(FileParser*) fileParseHandler FileLineNumber:(int)lineNumber;
 
 @end

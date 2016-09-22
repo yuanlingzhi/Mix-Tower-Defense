@@ -43,7 +43,7 @@
         for(int j = 0 ;j<onepageNumber/2 && remainLevels != 0 ;i++,j++){
             CGPoint tempPoint = (CGPoint){(increment)/2+firstRowLeftMargin, firstRow};
             firstRowLeftMargin += increment;
-            LevelOption* levelOption = [[LevelOption alloc] initWithNamePosition:levelNames[i] Position:tempPoint];
+            LevelOption* levelOption = [[LevelOption alloc] initWithNamePosition:levelNames[i] Position:tempPoint FileParserHandler:_fileParserHandler LineNumber:i];
             [self addChild:levelOption];
             [_levels addObject:levelOption];
             remainLevels--;
@@ -55,7 +55,7 @@
         for(int j = 0 ;j<onepageNumber/2 && remainLevels != 0 ;i++, j++){
             CGPoint tempPoint = (CGPoint){(increment)/2+secondRowLeftMargin, secondRow};
             secondRowLeftMargin += increment;
-            LevelOption* levelOption = [[LevelOption alloc] initWithNamePosition:levelNames[i] Position:tempPoint];
+            LevelOption* levelOption = [[LevelOption alloc] initWithNamePosition:levelNames[i] Position:tempPoint FileParserHandler:_fileParserHandler LineNumber:i];
             [self addChild:levelOption];
             [_levels addObject:levelOption];
             remainLevels--;

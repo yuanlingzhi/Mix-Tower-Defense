@@ -13,8 +13,12 @@
 {
     NSMutableArray<NSString*>* _fileLines;
     NSArray<NSString*>* _fileHeader;
+    int _rowNumberWithoutHeader;
 }
 
+-(int) getRowNumberWithoutHeader{
+    return _rowNumberWithoutHeader;
+}
 
 -(id) initWithFileName: (NSString*) filename{
     self = [super init];
@@ -33,6 +37,7 @@
             firstLine =NO;
         }else{
             [_fileLines addObject:row];
+            _rowNumberWithoutHeader++;
         }
     }
     return self;
