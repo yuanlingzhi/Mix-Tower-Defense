@@ -11,6 +11,7 @@
 #import "LevelSprite.h"
 #import "cocos2d.h"
 #import "cocos2d-ui.h"
+#import "SettingScene.h"
 @interface Level : CCScene
 
 -(id) initWithMapConfig: (FileParser*) fileParseHandler FileLineNumber:(int)lineNumber;

@@ -38,6 +38,7 @@
     self.position = position;
     [self addChild:_label];
     self.userInteractionEnabled = YES;
+    
     return self;
 }
 

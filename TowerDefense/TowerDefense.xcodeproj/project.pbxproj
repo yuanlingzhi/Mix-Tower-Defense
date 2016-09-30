@@ -203,6 +203,8 @@
 		273BAF941D7E71050099B0A2 /* LICENSE_Chipmunk.txt in Resources */ = {isa = PBXBuildFile; fileRef = 273BAF931D7E71050099B0A2 /* LICENSE_Chipmunk.txt */; };
 		273BAF981D7E71050099B0A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 273BAF971D7E71050099B0A2 /* main.m */; };
 		273BAFA11D7E71050099B0A2 /* white_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 273BAFA01D7E71050099B0A2 /* white_square.png */; };
+		3B3BAA1D1D9E2A9900606C9E /* creeps.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3B3BAA1C1D9E2A9900606C9E /* creeps.csv */; };
+		3B3BAA1F1D9E2F3500606C9E /* creep_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3BAA1E1D9E2F3500606C9E /* creep_1.png */; };
 		3B847CF01D939544008A3CD2 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B847CEF1D939544008A3CD2 /* Level.m */; };
 		3BB32DCF1D8BB15800DF7DF7 /* leftArrowButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BB32DCD1D8BB15800DF7DF7 /* leftArrowButton.png */; };
 		3BB32DD01D8BB15800DF7DF7 /* rightArrowButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BB32DCE1D8BB15800DF7DF7 /* rightArrowButton.png */; };
@@ -678,6 +680,8 @@
 		273BAF961D7E71050099B0A2 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = "Supporting Files/Prefix.pch"; sourceTree = "<group>"; };
 		273BAF971D7E71050099B0A2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = "<group>"; };
 		273BAFA01D7E71050099B0A2 /* white_square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = white_square.png; path = Resources/white_square.png; sourceTree = "<group>"; };
+		3B3BAA1C1D9E2A9900606C9E /* creeps.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = creeps.csv; path = "Resources/Map Resources/creeps.csv"; sourceTree = "<group>"; };
+		3B3BAA1E1D9E2F3500606C9E /* creep_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = creep_1.png; path = "Resources/Map Resources/creep_1.png"; sourceTree = "<group>"; };
 		3B847CEE1D939544008A3CD2 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
 		3B847CEF1D939544008A3CD2 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
 		3BB32DCD1D8BB15800DF7DF7 /* leftArrowButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftArrowButton.png; sourceTree = "<group>"; };
@@ -1591,6 +1595,8 @@
 		3BEF66FE1D90F03200CA7687 /* Map Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3B3BAA1E1D9E2F3500606C9E /* creep_1.png */,
+				3B3BAA1C1D9E2A9900606C9E /* creeps.csv */,
 				3BEF670F1D90FF2800CA7687 /* mapsConfig.csv */,
 				3BEF66FF1D90F0A600CA7687 /* level1.jpg */,
 				3BEF67001D90F0A600CA7687 /* level1_data.csv */,
@@ -1748,6 +1754,7 @@
 				273BACFE1D7E71010099B0A2 /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
 				273BACED1D7E71010099B0A2 /* Default-Landscape~ipad.png in Resources */,
 				3BC909E71D7E8B5100EFF1AB /* Track02.mp3 in Resources */,
+				3B3BAA1F1D9E2F3500606C9E /* creep_1.png in Resources */,
 				273BAD021D7E71010099B0A2 /* Icon-Small.png in Resources */,
 				3BB32DD01D8BB15800DF7DF7 /* rightArrowButton.png in Resources */,
 				3BEF67101D90FF2800CA7687 /* mapsConfig.csv in Resources */,
@@ -1757,6 +1764,7 @@
 				273BACF41D7E71010099B0A2 /* Icon-72.png in Resources */,
 				3BC909E41D7E7FBC00EFF1AB /* unchecked.png in Resources */,
 				273BADEF1D7E71030099B0A2 /* LICENSE_cocos2d.txt in Resources */,
+				3B3BAA1D1D9E2A9900606C9E /* creeps.csv in Resources */,
 				273BADF21D7E71030099B0A2 /* CCEffectRenderer.h in Resources */,
 				273BACEB1D7E71010099B0A2 /* Default-568h@2x.png in Resources */,
 				3BB32DCF1D8BB15800DF7DF7 /* leftArrowButton.png in Resources */,
