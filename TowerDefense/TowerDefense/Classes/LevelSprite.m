@@ -17,6 +17,8 @@
     NSString* _map_bg_pic;
     float _height;
     float _width;
+    NSMutableArray* _stop_points;
+    NSArray* _waves;
 }
 
 -(id) initWithMapConfig: (FileParser*) fileParseHandler FileLineNumber:(int)lineNumber{
@@ -45,7 +47,19 @@
     _map_bg_pic = config[3];
     _width = [config[4] floatValue];
     _height= [config[5] floatValue];
+    _stop_points = [NSMutableArray new];
+    NSArray<NSString*>* stop_point_set = [config[6] componentsSeparatedByString:@";"];
+    for( NSString* item in stop_point_set){
+        NSArray<NSString*>* temp = [item componentsSeparatedByString:@":"];
+        CGPoint point = {[temp[0] intValue], [temp[1] intValue]};
+        [_stop_points addObject: NSStringFromCGPoint(point)];
+    }
     
+    // inside of waves are strings, the format is <int>:<int>
+    // first int represents creep type
+    // second int represents creep amount
+    _waves = [config[7] componentsSeparatedByString:@";"];
+    [self gameStarts];
     return self;
 }
 
@@ -59,6 +73,10 @@
         }
     }
     return res;
+}
+
+-(void) gameStarts{
+    NSDictionary* creepDataMap = [[CreepLoader sharedCreepLoader] creepDataMap];
 }
 
 @end

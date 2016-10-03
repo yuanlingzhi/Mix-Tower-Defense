@@ -206,6 +206,9 @@
 		3B3BAA1D1D9E2A9900606C9E /* creeps.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3B3BAA1C1D9E2A9900606C9E /* creeps.csv */; };
 		3B3BAA1F1D9E2F3500606C9E /* creep_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3BAA1E1D9E2F3500606C9E /* creep_1.png */; };
 		3B847CF01D939544008A3CD2 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B847CEF1D939544008A3CD2 /* Level.m */; };
+		3BA37EA31DA20ADA0093CD1E /* CreepView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA37EA21DA20ADA0093CD1E /* CreepView.m */; };
+		3BA37EA71DA20B460093CD1E /* CreepModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA37EA61DA20B460093CD1E /* CreepModel.m */; };
+		3BA37EAC1DA212E10093CD1E /* CreepLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA37EAB1DA212E10093CD1E /* CreepLoader.m */; };
 		3BB32DCF1D8BB15800DF7DF7 /* leftArrowButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BB32DCD1D8BB15800DF7DF7 /* leftArrowButton.png */; };
 		3BB32DD01D8BB15800DF7DF7 /* rightArrowButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BB32DCE1D8BB15800DF7DF7 /* rightArrowButton.png */; };
 		3BC909E41D7E7FBC00EFF1AB /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BC909E21D7E7FBC00EFF1AB /* unchecked.png */; };
@@ -684,6 +687,12 @@
 		3B3BAA1E1D9E2F3500606C9E /* creep_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = creep_1.png; path = "Resources/Map Resources/creep_1.png"; sourceTree = "<group>"; };
 		3B847CEE1D939544008A3CD2 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
 		3B847CEF1D939544008A3CD2 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
+		3BA37EA11DA20ADA0093CD1E /* CreepView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreepView.h; path = Classes/CreepView.h; sourceTree = "<group>"; };
+		3BA37EA21DA20ADA0093CD1E /* CreepView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreepView.m; path = Classes/CreepView.m; sourceTree = "<group>"; };
+		3BA37EA51DA20B460093CD1E /* CreepModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreepModel.h; path = Classes/CreepModel.h; sourceTree = "<group>"; };
+		3BA37EA61DA20B460093CD1E /* CreepModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreepModel.m; path = Classes/CreepModel.m; sourceTree = "<group>"; };
+		3BA37EAA1DA212E10093CD1E /* CreepLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreepLoader.h; path = Classes/CreepLoader.h; sourceTree = "<group>"; };
+		3BA37EAB1DA212E10093CD1E /* CreepLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreepLoader.m; path = Classes/CreepLoader.m; sourceTree = "<group>"; };
 		3BB32DCD1D8BB15800DF7DF7 /* leftArrowButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftArrowButton.png; sourceTree = "<group>"; };
 		3BB32DCE1D8BB15800DF7DF7 /* rightArrowButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightArrowButton.png; sourceTree = "<group>"; };
 		3BC909E21D7E7FBC00EFF1AB /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
@@ -1592,6 +1601,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3BA37EA41DA20ADF0093CD1E /* Creep */ = {
+			isa = PBXGroup;
+			children = (
+				3BA37EA11DA20ADA0093CD1E /* CreepView.h */,
+				3BA37EA21DA20ADA0093CD1E /* CreepView.m */,
+				3BA37EA51DA20B460093CD1E /* CreepModel.h */,
+				3BA37EA61DA20B460093CD1E /* CreepModel.m */,
+			);
+			name = Creep;
+			sourceTree = "<group>";
+		};
 		3BEF66FE1D90F03200CA7687 /* Map Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1620,6 +1640,8 @@
 			children = (
 				3BEF67341D9105BF00CA7687 /* AppConfig.h */,
 				3BEF67351D9105BF00CA7687 /* AppConfig.m */,
+				3BA37EAA1DA212E10093CD1E /* CreepLoader.h */,
+				3BA37EAB1DA212E10093CD1E /* CreepLoader.m */,
 			);
 			name = Config;
 			sourceTree = "<group>";
@@ -1636,6 +1658,7 @@
 		3BEF67151D9103E800CA7687 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3BA37EA41DA20ADF0093CD1E /* Creep */,
 				3BEF67301D91059900CA7687 /* AppDelegate.h */,
 				3BEF67311D91059900CA7687 /* AppDelegate.m */,
 				3BEF67321D91059900CA7687 /* HelloWorldScene.h */,
@@ -1884,6 +1907,7 @@
 				273BAEDC1D7E71040099B0A2 /* OALAudioTrack.m in Sources */,
 				273BADE31D7E71020099B0A2 /* CCTiledMapObjectGroup.m in Sources */,
 				273BAE851D7E71030099B0A2 /* NSEvent+CC.m in Sources */,
+				3BA37EA71DA20B460093CD1E /* CreepModel.m in Sources */,
 				273BAD4C1D7E71020099B0A2 /* CCActionProgressTimer.m in Sources */,
 				273BAE9E1D7E71030099B0A2 /* CGPointExtension.m in Sources */,
 				273BAD711D7E71020099B0A2 /* CCLabelTTF.m in Sources */,
@@ -1900,6 +1924,7 @@
 				273BAEF11D7E71040099B0A2 /* ALChannelSource.m in Sources */,
 				273BAE3C1D7E71030099B0A2 /* CCEffectTexture.m in Sources */,
 				273BAE6F1D7E71030099B0A2 /* CCDirectorIOS.m in Sources */,
+				3BA37EA31DA20ADA0093CD1E /* CreepView.m in Sources */,
 				273BAD311D7E71010099B0A2 /* CCShader.m in Sources */,
 				273BAE9B1D7E71030099B0A2 /* CCVertex.m in Sources */,
 				273BAEA11D7E71030099B0A2 /* NSAttributedString+CCAdditions.m in Sources */,
@@ -1910,6 +1935,7 @@
 				273BADC21D7E71020099B0A2 /* CCSprite.m in Sources */,
 				273BAE7C1D7E71030099B0A2 /* CCDirectorMac.m in Sources */,
 				3BEF672C1D91056600CA7687 /* LevelSprite.m in Sources */,
+				3BA37EAC1DA212E10093CD1E /* CreepLoader.m in Sources */,
 				273BAF011D7E71040099B0A2 /* ALSource.m in Sources */,
 				273BAF1D1D7E71040099B0A2 /* NSMutableDictionary+WeakReferences.m in Sources */,
 				273BAE2A1D7E71030099B0A2 /* CCEffectContrast.m in Sources */,

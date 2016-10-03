@@ -8,7 +8,7 @@
 
 #import "CCSprite.h"
 #import "FileParser.h"
-
+#import "CreepLoader.h"
 @interface LevelSprite : CCSprite
 
 -(id) initWithMapConfig:(FileParser*) fileParseHandler FileLineNumber:(int)lineNumber;
